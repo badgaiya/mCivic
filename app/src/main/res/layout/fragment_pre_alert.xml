@@ -4,52 +4,15 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_margin="@dimen/_10sdp"
     android:layout_height="wrap_content">
-    <FrameLayout
-        android:id="@+id/frame_container"
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewMyhelper"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
-
-    <androidx.cardview.widget.CardView
-        android:elevation="@dimen/_5sdp"
-        android:layout_margin="@dimen/_10sdp"
-        android:background="@color/white"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <TextView
-                android:padding="@dimen/_15sdp"
-                android:textSize="@dimen/_6ssp"
-                android:textColor="@color/black"
-                android:text="No Image\n avilable"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
-
-            <LinearLayout
-                android:padding="@dimen/_5sdp"
-                android:orientation="vertical"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
-
-                <TextView
-                    android:text="Guest"
-                    android:textColor="@color/black"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
-                <TextView
-                    android:text="1999919191345"
-                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
-
-            </LinearLayout>
-
-        </LinearLayout>
+        android:layout_height="wrap_content"
+        android:overScrollMode="always" />
 
 
-    </androidx.cardview.widget.CardView>
         <!--you can put your existing views of your current xml here, so yes your entire xml is now inside this FrameLayout -->
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton

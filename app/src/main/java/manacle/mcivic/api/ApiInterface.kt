@@ -43,8 +43,23 @@ interface ApiInterface {
 
     ): Call<JsonObject>
     @FormUrlEncoded
+    @POST("visitor_master_dropdown")
+    fun spinnerDataList(
+        @Field("company_id") company_id: String
+
+    ): Call<JsonObject>
+    @FormUrlEncoded
     @POST("vendor_registration_list")
     fun myHelpergetDataList(
+        @Field("company_id") company_id: String,
+        @Field("login_id") login_id: String
+
+    ): Call<JsonObject>
+
+
+    @FormUrlEncoded
+    @POST("vistior_details")
+    fun visitorDataList(
         @Field("company_id") company_id: String,
         @Field("login_id") login_id: String
 
@@ -116,6 +131,29 @@ interface ApiInterface {
         @Part image: MultipartBody.Part,
         @Part image1: MultipartBody.Part
     ):Call<JsonObject>
+
+
+
+
+    @FormUrlEncoded
+
+    @POST("visitors_submit")
+    fun sendVisitorDataSubmit(
+        @Field("company_id") company_id: String,
+        @Field("login_id") login_id: String,
+        @Field("visitor_Mobile") reg_no: String,
+        @Field("Visitor_Name") name: String,
+        @Field("Visitor_Scedule_time") mobile_no: String,
+        @Field("Recurring_dropdown") address: String,
+        @Field("Vehicle_Type_dropdown") role_id: String,
+        @Field("Vehicle_Number") id_card_no: String
+
+    ):Call<JsonObject>
+
+
+
+
+
 
 
 

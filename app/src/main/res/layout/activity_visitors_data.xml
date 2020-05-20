@@ -46,6 +46,7 @@
                         android:background="@color/white">
 
                         <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/visitor_mobile"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:background="@color/white"
@@ -60,6 +61,7 @@
                         android:layout_marginTop="@dimen/_20sdp">
 
                         <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/visitor_name"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:background="@color/white"
@@ -88,9 +90,12 @@
                         android:textSize="@dimen/_15ssp"
                         android:id="@+id/visitor_scedule"
                         android:layout_width="0dp"
+                        android:onClick="clickDataPicker"
                         android:layout_height="wrap_content"
                         android:layout_weight=".6"
                         android:text="Visitor Scedule" />
+
+
 
 
                 </LinearLayout>
@@ -187,7 +192,7 @@
 
                     <androidx.appcompat.widget.AppCompatSpinner
                         android:textSize="@dimen/_15ssp"
-
+                        android:id="@+id/vehile_type_spinner"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight=".6"
@@ -203,6 +208,7 @@
                     android:background="@color/white">
 
                     <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/vehicle_number"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:background="@color/white"
