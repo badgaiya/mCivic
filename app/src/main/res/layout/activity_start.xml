@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="2"
+     >
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_gravity="bottom"
+        android:layout_margin="@dimen/margin_10"
+        android:layout_weight="2"
+        android:weightSum="1">
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/myViewPager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight=".9"
+          android:layout_marginBottom="10dp" />
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/viewPagerIndicatorIconsLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+       android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="20dp"
+android:padding="@dimen/margin_2"
+        android:orientation="horizontal">
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/firstDotImageView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:contentDescription="@null"
+            android:layout_margin="7dp"
+            android:src="@drawable/current_position_icon" />
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/secondDotImageView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="7dp"
+            android:contentDescription="@null"
+            android:src="@drawable/disable_position_icon" />
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/thirdDotImageView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="7dp"
+            android:contentDescription="@null"
+            android:src="@drawable/disable_position_icon" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Welcome,We are happy to help you"
+        android:textStyle="bold|italic"
+        android:padding="@dimen/margin_20"
+        android:textSize="@dimen/margin_20"/>
+<androidx.appcompat.widget.LinearLayoutCompat
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_gravity="bottom"
+    android:layout_margin="@dimen/margin_10"
+    android:padding="@dimen/margin_10"
+    android:layout_marginBottom="@dimen/margin_20"
+     android:weightSum="2">
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/sign_in_btn"
+        style="@style/MyButton"
+        android:layout_width="match_parent"
+        android:text="@string/sign_in"
+        android:layout_weight="1"
+      android:layout_margin="@dimen/margin_2"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Button"
+        android:layout_height="wrap_content" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/sign_up_btn"
+         android:layout_width="match_parent"
+        android:text="@string/sign_up"
+        android:layout_weight="1"
+        style="@style/MyButton"
+
+        android:layout_margin="@dimen/margin_2"
+        android:layout_height="wrap_content" />
+</androidx.appcompat.widget.LinearLayoutCompat>
+</androidx.appcompat.widget.LinearLayoutCompat>
+

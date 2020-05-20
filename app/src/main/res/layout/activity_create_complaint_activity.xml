@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/parent_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorAccent"
+            app:titleTextAppearance="@color/white"
+            app:titleTextColor="@color/colorButton"
+            android:gravity="center"
+            app:popupTheme="@style/AppTheme" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/layout_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingTop="@dimen/margin_10"
+                android:paddingBottom="@dimen/margin_2">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/complaint_duration"
+                        android:textAllCaps="true"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/margin_12" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/complaint_duration_text_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_2"
+                        android:gravity="center"
+                        android:text="@string/complaint_duration"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/margin_12" />
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/complaint"
+                        android:textAllCaps="true"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/margin_12" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/complaint_num_text_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_2"
+                        android:gravity="center"
+                        android:text="@string/complaint"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/margin_12" />
+                </androidx.appcompat.widget.LinearLayoutCompat>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_10"
+                android:layout_marginBottom="@dimen/margin_10"
+                android:layout_below="@id/layout_info"
+                android:weightSum="4"
+                android:background="@color/white">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/vote_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="@dimen/margin_10"
+                    style="@style/MyButton"
+                     android:ellipsize="end"
+                    android:gravity="center"
+                    android:text="@string/Vote"
+                    android:singleLine="true"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/margin_12"
+                    android:textStyle="bold" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/count_status_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.7"
+                    android:layout_marginLeft="@dimen/margin_10"
+                     android:ellipsize="end"
+                    android:text="@string/Vote"
+                    android:gravity="center"
+                    android:padding="@dimen/margin_10"
+                    android:singleLine="true"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/margin_10"
+                    android:textStyle="bold"  />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/totalCount_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="@dimen/margin_10"
+                     android:ellipsize="end"
+                    android:gravity="end"
+                    android:padding="@dimen/margin_10"
+                    android:singleLine="true"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/margin_12"
+                    android:textStyle="bold"  />
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/comp_status_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="@dimen/margin_10"
+                     android:ellipsize="end"
+                    android:gravity="center"
+                    android:padding="@dimen/margin_10"
+                    android:singleLine="true"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/margin_12"
+                    android:textStyle="bold"
+                    />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/main_scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+         android:background="@color/white"
+        android:fillViewport="true"
+        android:focusableInTouchMode="true"
+        android:scrollbars="none">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/margin_2"
+            android:paddingRight="@dimen/margin_2">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/mandatory_fields_text_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:text="@string/text_all_fields_mandatory"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textSize="@dimen/margin_12" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_2"
+                android:layout_marginTop="@dimen/margin_2"
+                android:text="@string/complaint_image"
+                android:textColor="@color/black"
+                android:textSize="@dimen/margin_12" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="@dimen/margin_2"
+                app:cardElevation="@dimen/margin_2"
+                app:cardUseCompatPadding="true">
+
+<!--                <com.facebook.drawee.view.SimpleDraweeView-->
+<!--                    android:id="@+id/complaint_simple_drawee_view"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:layout_centerVertical="true"-->
+<!--                    android:layout_gravity="center"-->
+<!--                    android:visibility="gone"-->
+<!--                    app:failureImage="@drawable/place_holder_no_image"-->
+<!--                    app:progressBarAutoRotateInterval="1000"-->
+<!--                    app:progressBarImage="@drawable/ic_loading"-->
+<!--                    app:retryImage="@drawable/ic_loading" />-->
+
+
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/complaint_image_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/image_capture_text_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:hint="@string/image_capture_text"
+                        android:visibility="visible" />
+
+                    <androidx.appcompat.widget.AppCompatImageButton
+                        android:id="@+id/capture_image_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentBottom="true"
+                        android:src="@drawable/ic_add_a_photo_24dp" />
+             </androidx.cardview.widget.CardView>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/complaint_cat_title_text_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_2"
+                android:layout_marginTop="@dimen/margin_2"
+                android:text="@string/select_a_category"
+                android:textColor="@color/black"
+                android:textSize="@dimen/margin_12" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="@dimen/margin_2"
+                app:cardElevation="@dimen/margin_2"
+                app:cardUseCompatPadding="true">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/complaint_category_text_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                     android:clickable="true"
+                    android:hint="@string/select_category_text"
+                    android:padding="@dimen/margin_10"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/margin_12" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_2"
+                android:layout_marginTop="@dimen/margin_2"
+                android:text="@string/complaint_description"
+                android:textColor="@color/black"
+                android:textSize="@dimen/margin_12" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="@dimen/margin_2"
+                app:cardElevation="@dimen/margin_2"
+                app:cardUseCompatPadding="true">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/complaint_description_edit_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:background="@null"
+                    android:gravity="start"
+                    android:hint="@string/three_hundred_letters_text"
+                    android:inputType="textCapSentences|textMultiLine"
+                    android:maxLength="300"
+                    android:padding="@dimen/margin_10"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/margin_12" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_2"
+                android:layout_marginTop="@dimen/margin_2"
+                android:text="@string/complaint_address"
+                android:textColor="@color/black"
+                android:textSize="@dimen/margin_12" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="@dimen/margin_2"
+                app:cardElevation="@dimen/margin_2"
+                app:cardUseCompatPadding="true">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/complaint_address_edit_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:background="@null"
+                    android:gravity="start"
+                    android:hint="@string/two_hundred_letters_text"
+                    android:inputType="textCapSentences|textMultiLine"
+                    android:maxLength="200"
+                    android:padding="@dimen/margin_10"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/margin_12" />
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_2"
+                android:layout_marginTop="@dimen/margin_2"
+                android:text="@string/geo_address"
+                android:textColor="@color/white"
+                android:textSize="@dimen/margin_12" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_2"
+                android:focusableInTouchMode="true"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="@dimen/margin_2"
+                app:cardElevation="@dimen/margin_2"
+                app:cardUseCompatPadding="true">
+
+
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/geo_address_text_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:hint="@string/geo_address"
+                        android:padding="@dimen/margin_2"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/margin_12" />
+
+
+
+                        <fragment
+                            android:id="@+id/map_fragment"
+                            class="com.google.android.gms.maps.MapFragment"
+                            android:layout_width="match_parent"
+                            android:layout_height="250dp" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/transparent_image"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@android:color/transparent" />
+
+            </androidx.cardview.widget.CardView>
+
+            <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+                android:id="@+id/submit_complaint_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_10"
+                android:text="@string/submit"
+                android:textAllCaps="true"
+                android:gravity="center"
+                android:textColor="@color/colorButton"
+                android:textSize="@dimen/margin_12"
+                android:textStyle="bold" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.core.widget.NestedScrollView>
+</androidx.appcompat.widget.LinearLayoutCompat>

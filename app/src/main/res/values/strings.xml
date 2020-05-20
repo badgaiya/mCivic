@@ -1,0 +1,54 @@
+<resources>
+    <string name="app_name">mCivic</string>
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="sign_in">Sign In</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="prompt_mobile">Mobile No.</string>
+    <string name="prompt_otp">Enter OTP</string>
+    <string name="sign_up_notification">please take a moment to verify your mobile</string>
+    <string name="request_otp">Request OTP</string>
+    <string name="verify">Verify</string>
+    <string name="otp_notification">OTP has been sent to you on your mobile phone.</string>
+    <string name="select_city_town">Select City/Town</string>
+    <string name="enter_name">Enter Name</string>
+    <string name="submit">Submit</string>
+    <string name="image_capture_text">CAPTURE an image\nOR\nSelect an image from GALLERY</string>
+    <string name="select_category">Select Category</string>
+    <string name="priority">Priority</string>
+    <string name="severity">Severity</string>
+    <string name="description">Description</string>
+    <string name="custom_address">Custom Address</string>
+    <string name="geo_address">Geo-Address</string>
+    <string name="complaint_duration">Complaint Duration</string>
+    <string name="complaint">Complaint</string>
+    <string name="Vote">Vote</string>
+    <string name="text_all_fields_mandatory"><u>Mandatory Fields* </u></string>
+    <string name="complaint_image">Complaint Image</string>
+    <string name="select_a_category">Select a category</string>
+    <string name="select_category_text">Click here to select a Category</string>
+    <string name="complaint_description">Complaint Description</string>
+    <string name="three_hundred_letters_text">You have 300 letters !</string>
+    <string name="two_hundred_letters_text">Not more than 200 letters !</string>
+    <string name="complaint_address">Complaint Address</string>
+    <string name="navigation_drawer_open" />
+    <string name="navigation_drawer_close" />
+
+
+    <string name="selected_item">Selected item:</string>
+
+    <string-array name="Languages">
+        <item>Voter ID Card</item>
+        <item>Aadhar Card</item>
+        <item>Pan Card</item>
+
+    </string-array>
+
+</resources>

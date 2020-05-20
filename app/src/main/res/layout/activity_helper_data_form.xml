@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include
+        android:id="@+id/header"
+        layout="@layout/header" />
+    <ScrollView
+         android:layout_above="@+id/fab"
+        android:layout_below="@id/header"
+         android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <AutoCompleteTextView
+            android:id="@+id/name_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_5sdp"
+            android:layout_weight="1"
+            android:hint="Name"
+            android:inputType="text"
+            android:selectAllOnFocus="true" />
+        
+        
+       
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/mobie_no"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_5sdp"
+            android:layout_weight="1"
+            android:ems="10"
+            android:hint="Mobile Number"
+            android:inputType="phone"
+            android:selectAllOnFocus="true" />
+
+        <TextView
+            android:layout_margin="@dimen/_5sdp"
+            android:text="Gender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:id="@+id/gender_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_5sdp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/spinner_bg"
+            android:gravity="center" />
+
+
+       
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/father_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_5sdp"
+            android:layout_weight="1"
+            android:hint="Father Name"
+            android:inputType="text"
+            android:selectAllOnFocus="true" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_5sdp"
+            android:layout_weight="1"
+            android:hint="Address"
+            android:inputType="text"
+            android:selectAllOnFocus="true" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:visibility="gone"
+            android:id="@+id/person_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_5sdp"
+            android:layout_weight="1"
+            android:hint="Person id"
+            android:inputType="text"
+            android:selectAllOnFocus="true" />
+
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/dob"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_5sdp"
+            android:layout_weight="1"
+            android:hint="Dob"
+            android:inputType="text"
+            android:selectAllOnFocus="true" />
+        <TextView
+            android:layout_margin="@dimen/_5sdp"
+            android:text="Id Proof"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:id="@+id/severity_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_5sdp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/spinner_bg"
+            android:gravity="center" />
+       
+
+
+
+
+        <RelativeLayout
+            android:layout_margin="@dimen/_5sdp"
+            android:background="@drawable/rectangular_bg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/mImageView"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="Upload Image"
+
+                android:padding="@dimen/_5sdp"
+                 android:textSize="@dimen/margin_12"
+                android:textStyle="bold" />
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+
+                android:id="@+id/btnCapture"
+                android:layout_alignParentEnd="true"
+                android:padding="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:src="@drawable/ic_camera"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_alignParentRight="true" />
+
+        </RelativeLayout>
+
+
+
+
+    </LinearLayout>
+    </ScrollView>
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="@dimen/margin_7"
+        android:background="@color/colorAccent"
+        android:gravity="center"
+        android:text="Submit"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Button"
+        android:textColor="#ffffff" />
+
+
+</RelativeLayout>

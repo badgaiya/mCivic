@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorAccent"
+            app:titleTextColor="@color/colorButton"
+            app:popupTheme="@style/AppTheme" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_20"
+        android:textStyle="bold"
+        android:textSize="@dimen/margin_15"
+        android:text="@string/sign_up_notification"
+        />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/mobile_no_et"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_20"
+        android:hint="@string/prompt_mobile"
+        android:maxLength="10"
+        android:inputType="number"
+        android:selectAllOnFocus="true"
+         />
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/request_otp_btn"
+        style="@style/MyButton"
+        android:layout_width="match_parent"
+        android:text="@string/request_otp"
+         android:layout_margin="@dimen/margin_2"
+        android:layout_height="wrap_content" />
+
+</androidx.appcompat.widget.LinearLayoutCompat>
