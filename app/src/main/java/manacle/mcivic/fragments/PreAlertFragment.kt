@@ -86,7 +86,7 @@ class PreAlertFragment : Fragment() {
 
                             if (responseStatus) {
                                 val data: JsonArray =
-                                    mResponseBody.getAsJsonObject().getAsJsonArray("data")
+                                    mResponseBody.getAsJsonArray("data")
                                 if (data.size() > 0) {
 
                                     for (i in 0 until data.size()) {
@@ -115,11 +115,11 @@ class PreAlertFragment : Fragment() {
                                             data.get(i).asJsonObject.get("created_at").asString
                                         val created_by: String =
                                             data.get(i).asJsonObject.get("created_by").asString
-                                        val updated_at: String =
+                                      /*  val updated_at: String =
                                             data.get(i).asJsonObject.get("updated_at").asString
                                         val updated_by: String =
                                             data.get(i).asJsonObject.get("updated_by").asString
-
+*/
 
                                         var visitorModel = VisitorDataModel(
                                             id,
@@ -132,10 +132,10 @@ class PreAlertFragment : Fragment() {
                                             visitor_vehicle_number,
                                             status,
                                             created_at,
-                                            created_by,
-                                            updated_at,
-                                            updated_by
-
+                                            created_by
+                                           /* "",
+                                            ""
+*/
                                         )
                                         visitorDataModel.add(visitorModel)
 

@@ -11,7 +11,7 @@ data class VisitorDataModel(
     val visitor_vehicle_number: String,
     val status: String,
     val created_at: String,
-    val created_by: String,
-    val updated_at: String,
-    val updated_by: String
+    val created_by: String
+   /* val updated_at: String,
+    val updated_by: String*/
 )

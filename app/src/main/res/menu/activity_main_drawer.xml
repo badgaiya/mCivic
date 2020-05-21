@@ -9,11 +9,12 @@
              android:title="Home" />
         <item
             android:id="@+id/my_helper"
-            android:icon="@drawable/ic_test_demo"
+            android:icon="@drawable/staff"
 
             android:title="My Helper" />
         <item
             android:id="@+id/nav_visitors"
+            android:icon="@drawable/visitors"
              android:title="Visitors" />
     </group>
 </menu>

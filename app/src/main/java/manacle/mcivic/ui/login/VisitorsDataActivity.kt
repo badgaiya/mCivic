@@ -1,18 +1,25 @@
 package manacle.mcivic.ui.login
 
 import android.annotation.SuppressLint
+import android.app.Activity
 import android.app.DatePickerDialog
 import android.app.ProgressDialog
+import android.content.Context
+import android.content.DialogInterface
 import android.content.Intent
+import android.database.Cursor
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.provider.MediaStore
 import android.util.Log
 import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.viewpager.widget.ViewPager
 import com.google.android.material.tabs.TabLayout
 import com.google.gson.JsonArray
@@ -49,6 +56,7 @@ class VisitorsDataActivity : AppCompatActivity() {
     var year = c.get(Calendar.YEAR)
     var month = c.get(Calendar.MONTH)
     var day = c.get(Calendar.DAY_OF_MONTH)
+    private var selectedImage: Uri? = null
 
     lateinit var recurrindList: ArrayList<RecurrindList>
     lateinit private var vechileTypeLiist: ArrayList<VechileTypeLiist>
@@ -94,8 +102,67 @@ class VisitorsDataActivity : AppCompatActivity() {
             submitData()
 
         })
+        guest_image.setOnClickListener({
+            selectImage(this)
+        })
       /*  tabLayout = findViewById<TabLayout>(R.id.tabLayout)
         viewPager = findViewById<ViewPager>(R.id.viewPager)*/
+    }
+
+    private fun selectImage(context: Context) {
+        val options =
+            arrayOf<CharSequence>("Take Photo", "Choose from Gallery", "Cancel")
+        val builder: AlertDialog.Builder = AlertDialog.Builder(context)
+        builder.setTitle("Choose your profile picture")
+        builder.setItems(options, DialogInterface.OnClickListener { dialog, item ->
+            if (options[item] == "Take Photo") {
+                val takePicture =
+                    Intent(MediaStore.ACTION_IMAGE_CAPTURE)
+                startActivityForResult(takePicture, 0)
+            } else if (options[item] == "Choose from Gallery") {
+                val pickPhoto = Intent(
+                    Intent.ACTION_PICK,
+                    MediaStore.Images.Media.EXTERNAL_CONTENT_URI
+                )
+                startActivityForResult(pickPhoto, 1)
+            } else if (options[item] == "Cancel") {
+                dialog.dismiss()
+            }
+        })
+        builder.show()
+    }
+    override fun onActivityResult(
+        requestCode: Int,
+        resultCode: Int,
+        data: Intent?
+    ) {
+        super.onActivityResult(requestCode, resultCode, data)
+        if (resultCode != Activity.RESULT_CANCELED) {
+            when (requestCode) {
+                0 -> if (resultCode == Activity.RESULT_OK && data != null) {
+                    val selectedImage = data.extras!!["data"] as Bitmap?
+                    this.guest_image.setImageBitmap(selectedImage)
+                }
+                1 -> if (resultCode == Activity.RESULT_OK && data != null) {
+                    selectedImage = data.data
+                    val im =
+                        arrayOf(MediaStore.Images.Media.DATA)
+                    if (selectedImage != null) {
+                        val cursor: Cursor? = contentResolver.query(
+                            selectedImage!!,
+                            im, null, null, null
+                        )
+                        if (cursor != null) {
+                            cursor.moveToFirst()
+                            val columnIndex: Int = cursor.getColumnIndex(im[0])
+                            val picturePath: String = cursor.getString(columnIndex)
+                            guest_image.setImageBitmap(BitmapFactory.decodeFile(picturePath))
+                            cursor.close()
+                        }
+                    }
+                }
+            }
+        }
     }
 
     private fun setStatePageAdapter() {

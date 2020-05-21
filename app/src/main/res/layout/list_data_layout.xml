@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/cardView_adapter"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="@dimen/_5sdp"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+    android:layout_margin="@dimen/_5sdp">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -18,16 +17,17 @@
             android:padding="5dp"
             android:text="Belal Khan"
             android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
-<TextView
+
+        <TextView
             android:id="@+id/address"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="5dp"
             android:text="Be"
-    android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium" />
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium" />
 
         <TextView
-             android:id="@+id/mobie_no"
+            android:id="@+id/mobie_no"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="5dp"
